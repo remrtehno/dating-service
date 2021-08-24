@@ -1,8 +1,37 @@
+@font-face {
+  font-family: 'Corpid E1s SCd Regular';
+  src:
+          url("./assets/fonts/CorpidE1sSCd-Regular.woff") format("woff"),
+          url("./assets/fonts/CorpidE1sSCd-Regular.eot"),
+          url("./assets/fonts/CorpidE1sSCd-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corpid E1s SCd Heavy';
+  src:
+          url("./assets/fonts/CorpidE1sSCd-Heavy.woff") format("woff"),
+          url("./assets/fonts/CorpidE1sSCd-Heavy.eot"),
+          url("./assets/fonts/CorpidE1sSCd-Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corpid E1s SCd Bold';
+  src:
+          url("./assets/fonts/CorpidE1sSCd-Bold.woff") format("woff"),
+          url("./assets/fonts/CorpidE1sSCd-Bold.eot"),
+          url("./assets/fonts/CorpidE1sSCd-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  margin: 0;
-  padding: 0;
   height: 100vh;
   width: 100vm;
+  font-family: 'Corpid E1s SCd Regular', Arial, sans-serif;
 }
 
 #root {
@@ -14,7 +43,10 @@ body {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+
 }
 
 .app {
@@ -22,4 +54,11 @@ body {
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
+  background: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .app {
+    width: 100%;
+  }
 }

@@ -1,28 +1,45 @@
 import styled from 'styled-components';
-import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
-import { ReactComponent as LogoIcon } from '../../assets/icons/logo.svg';
+
 
 export const Header = styled.header`
-  height: 50px;
+  min-height: 50px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  border-bottom: 1px solid #000;
-  background-color: #fff;
   position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #909090;
+  color: #333;
+  
+  h1 {
+    font-size: 18px;
+  }
 `;
 
-export const Logo = styled(LogoIcon)`
-
-`;
-
-export const Title = styled.h1`
-  font-size: 12px;
-`;
-
-export const Menu = styled(MenuIcon)`
-  width: 16px;
-  height: 16px;
+export const Logo = styled.div`
+  height: 100%;
   cursor: pointer;
+  
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const Menu = styled.div`
+  width: 32px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 `;

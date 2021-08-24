@@ -5,6 +5,9 @@ const initialState: TYPES.IAppState = {
     configIsLoading: false,
     flowUrl: null,
     captchaKey: null,
+
+    language: '',
+    languageIsLoading: false,
 }
 
 const appReducer = (state=initialState, action:TYPES.AppActionTypes):TYPES.IAppState => {
@@ -12,13 +15,23 @@ const appReducer = (state=initialState, action:TYPES.AppActionTypes):TYPES.IAppS
         case TYPES.CONFIG_IS_LOADING:
             return {
                 ...state,
-                configIsLoading: action.isLoading
+                configIsLoading: action.isLoading,
             }
         case TYPES.CONFIG_IS_SUCCEED:
             return {
                 ...state,
                 flowUrl: action.data.flow_url,
-                captchaKey: action.data.recaptchav3_public
+                captchaKey: action.data.recaptchav3_public,
+            }
+        case TYPES.LANGUAGE_IS_LOADING:
+            return {
+                ...state,
+                languageIsLoading: action.isLoading,
+            }
+        case TYPES.LANGUAGE_IS_SUCCEED:
+            return {
+                ...state,
+                language: action.data.lang,
             }
         default:
             return state;

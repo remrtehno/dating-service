@@ -6,3 +6,8 @@ export const Wrap = styled.main`
   height: 100%;
   position: relative;
 `;
+
+export const Block = styled.div`
+  position: absolute;
+  bottom: 0;
+`;

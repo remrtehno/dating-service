@@ -1,10 +1,12 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import {useDispatch} from "react-redux";
+import { useDispatch } from 'react-redux';
 
-import {ROUTES} from "./config/constants";
-import Header from "./components/Header/Header";
-import {getConfig} from "./store/app/actions";
+import { ROUTES } from './config/constants';
+import { getConfig } from './store/app/actions';
+import { login } from './store/auth/actions';
+import { getFaq } from './store/faq/actions';
+import Header from './components/Header/Header';
 import './index.css';
 
 const Main = lazy(() => import('./pages/Main/Main'));
@@ -18,17 +20,17 @@ const User = lazy(() => import('./pages/User/User'));
 const Chat = lazy(() => import('./pages/Chat/Chat'));
 const FAQ = lazy(() => import('./pages/FAQ/FAQ'));
 
-
 const App = () => {
     const dispatch = useDispatch();
 
     dispatch(getConfig());
-
+    dispatch(login());
+    dispatch(getFaq());
 
     return (
         <div className="app">
-            <Header title="Dating"/>
-            <Suspense fallback={<div>Loading</div>}>
+            <Header title="Знакомства"/>
+            <Suspense fallback={<div>{123}</div>}>
                 <Switch>
                     <Route path={ROUTES.Dialogs} render={() => <Dialogs/>} />
                     <Route path={ROUTES.Profile} render={() => <Profile/>} />

@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import * as API from '../../api/search';
+import * as API from '../../api/search/search';
 import * as TYPES from './types';
 
 const setFeedLoading = (isLoading:boolean) => ({

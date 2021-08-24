@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const Wrap = styled.div`
   width: 720px;
   height: 100%;
+  position: relative;
   
   .swiper-container {
     width: 100%;
@@ -16,6 +17,7 @@ export const Wrap = styled.div`
 
 export const Photo = styled.img`
   width: 720px;
+  height: 100%;
   object-fit: cover;
 `;
 

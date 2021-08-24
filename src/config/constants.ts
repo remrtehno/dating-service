@@ -1,4 +1,5 @@
 export const COOKIE_EXPIRE_DATE = 30;
+
 export enum ROUTES {
     Main = '/',
     Dialogs = '/dialogs',
@@ -9,5 +10,5 @@ export enum ROUTES {
     Offer = '/offer',
     User = '/user/:id',
     Chat = '/chat/:id',
-    FAQ = '/help',
+    FAQ = '/faq',
 }

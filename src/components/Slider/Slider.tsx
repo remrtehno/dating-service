@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { IUser } from '../../store/users/types';
 import Card from '../Card/Card';
 import * as S from './Slider.styled';
-import Details from "../Details/Details";
 
 interface ISliderProps {
     users: IUser[] | null,
@@ -13,7 +12,7 @@ interface ISliderProps {
 const Slider:FC<ISliderProps> = ({ users }) => {
     return (
         <S.Wrap>
-            <Swiper slidesPerView={1}>
+            <Swiper slidesPerView={'auto'} >
                 {
                     users?.map((item:IUser) => {
                         return (

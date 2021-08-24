@@ -5,8 +5,9 @@ import { RootState } from '../../store';
 import { getFeed } from '../../store/users/actions';
 import Feed from '../../components/Feed/Feed';
 import Slider from '../../components/Slider/Slider';
-import * as Styled from './Main.styled';
-import Details from "../../components/Details/Details";
+import * as S from './Main.styled';
+import Personal from "../../components/Personal/Personal";
+import Actions from "../../components/Actions/Actions";
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -18,11 +19,14 @@ const Main = () => {
     }, [dispatch])
 
     return (
-        <Styled.Wrap>
+        <S.Wrap>
             <Feed users={users}/>
             <Slider users={users}/>
-            <Details user={users?.[1]} />
-        </Styled.Wrap>
+            <S.Block>
+                <Personal />
+                <Actions />
+            </S.Block>
+        </S.Wrap>
     );
 }
 
